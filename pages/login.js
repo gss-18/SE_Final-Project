@@ -1,14 +1,18 @@
-
+import Head from 'next/head'
 
 const login = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 ">
+        <Head>
+            <title>BIT-D</title>  
+            <link rel="icon" href="/Logo.png" />
+        </Head>
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                  <img className="md:h-16 md:w-auto md:px-20 " src="https://erp.bitmesra.ac.in/imgnew1/BITMesradefault-new.png" alt="Smile :)"></img>
                  <span className="mt-10 md:mx-46 mx-28 text-3xl font-extrabold text-gray-900">Login </span>
                 
             </div> 
-            <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md"> 
+            <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md "> 
                  <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10"> 
                      <form className="mb-0 space-y-6" action="#" method="post">
                         <div>

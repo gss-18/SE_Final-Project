@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       spacing:{
-        '46':'10.6rem'
+        '46':'10.6rem',
+        'xl':'45rem'
       }
     },
   },
@@ -13,4 +14,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  
 }

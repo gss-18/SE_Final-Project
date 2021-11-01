@@ -37,6 +37,8 @@ const login = () => {
                  <span className="text-center  text-base text-semibold text-gray-700 max-w">Not registered yet? </span> <a href="/signup" className="font-medium text-red-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 mx-1">Register!</a>
                  </div>
             </div> 
+            <a href="/"><button className="mt-5 justify-end  md:ml-auto md:justify-end flex  py-2 px-4 border hover:bg-blue-500 border-blue-300 rounded-md shadow-sm text-ml font-medium text-white ">Home</button></a>
+
         </div>
     )
 }

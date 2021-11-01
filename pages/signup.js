@@ -7,7 +7,7 @@ const signup = () => {
             <title>BIT-D</title>  
             <link rel="icon" href="/Logo.png" />
         </Head>
-        <a href="/login"><button className="md:ml-auto transition md:justify-end duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110   w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-ml font-medium text-white ">Login</button></a>
+        
          <div className="sm:mx-auto sm:w-full sm:max-w-md ">
             <img className=" md:h-16 md:w-auto md:px-24 " src="https://erp.bitmesra.ac.in/imgnew1/BITMesradefault-new.png" alt="Smile :)"></img>
             <span className="mt-10 md:mx-16 mx-2 text-3xl font-extrabold text-gray-900">Create your account </span>
@@ -67,6 +67,18 @@ const signup = () => {
                 </div>
 
                 <div>
+                    <label className="block text-sm font-medium text-gray-700" for="semester">Gender</label>
+                    <div className="mt-1 ">
+                    <select name="course" id="course" className="border-2 rounded-lg border-red-300 flex w-full">
+                        
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                </div>
+
+                <div>
                   <button type="submit" className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110   w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">Sign up</button>
                </div>
             
@@ -76,7 +88,7 @@ const signup = () => {
         
         
         </div>
-
+        <a href="/"><button className="md:ml-auto md:justify-end flex justify-center py-2 px-4 border border-blue-300 hover:bg-blue-500 rounded-md shadow-sm text-ml font-medium text-white ">Home</button></a>
         </div>
     )
 }

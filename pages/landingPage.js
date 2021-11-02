@@ -4,9 +4,9 @@ import { Carousel } from 'react-responsive-carousel';
 
 const landingPage = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-500 min-h-screen">
+        <div className="">
             <Header />
-            <main className="flex flex-col-reverse md:flex-row ">
+            <main className="flex flex-col-reverse md:flex-row   ">
             <div className="md:w-2/3 ">
                     <Carousel showThumbs={true} > 
                     

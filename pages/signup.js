@@ -1,16 +1,16 @@
-import Head from 'next/head'
-
+import Logo from '../public/newLogo.png'
+import Image from 'next/image'
+import {HomeIcon} from '@heroicons/react/outline'
+import ClubsHeader from '../components/clubsHeader'
 const signup = () => {
     return ( 
-        <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 ">
-        <Head>
-            <title>BIT-D</title>  
-            <link rel="icon" href="/Logo.png" />
-        </Head>
+        <div className="flex flex-col justify-center ">
+        <ClubsHeader text="Home" link="/"/>
+        
         
          <div className="sm:mx-auto sm:w-full sm:max-w-md ">
-            <img className=" md:h-16 md:w-auto md:px-24 " src="https://erp.bitmesra.ac.in/imgnew1/BITMesradefault-new.png" alt="Smile :)"></img>
-            <span className="mt-10 md:mx-16 mx-2 text-3xl font-extrabold text-gray-900">Create your account </span>
+           
+            <span className="mt-10 md:mx-16 mx-2 text-3xl font-extrabold text-gray-900 text-center px-4 md:px-2">Create your account </span>
             <p className="text-center mt-2 text-sm text-gray-700 max-w">
             Already Registered?
             <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 mx-1">Sign In</a>

@@ -1,16 +1,15 @@
-import Head from 'next/head'
-
-
+import Logo from '../public/newLogo.png'
+import Image from 'next/image'
+import {HomeIcon} from '@heroicons/react/outline'
+import ClubsHeader from '../components/clubsHeader'
 const login = () => {
     return (
-        <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8 " style={{background: 'rgba(0, 0, 0, 0.5)', backgroundImage: `url(/bitd.jpg)`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition:'center' }}>
-        <Head>
-            <title>BIT-D</title>  
-            <link rel="icon" href="/Logo.png" />
-        </Head>
-            
-            
-            <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md "  >
+        
+        <div className="" >
+        
+            <ClubsHeader text="Home" link="/" />
+             
+                <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md "  >
          
            
                  <div className="bg-white py-8 px-6  shadow-lg rounded-lg sm:px-10"> 
@@ -37,9 +36,9 @@ const login = () => {
                  </form>
                  <span className="text-center  text-base text-semibold text-gray-700 max-w">Not registered yet? </span> <a href="/signup" className="font-medium text-red-600 hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 mx-1">Register!</a>
                  </div>
-            </div> 
-
-        </div>
+             </div> 
+            </div>
+        
     )
 }
 

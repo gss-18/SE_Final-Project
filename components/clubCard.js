@@ -15,7 +15,7 @@ const clubCard = (props) => {
                     </div>
                     <div className="text-right w-full">
                     <div className="px-4 py-2 text-left text-white font-semibold"> <span className="text-pink-500">{props.exp}</span></div>
-                    <a href={props.link} className="px-5 font-bold hover:text-pink-600 text-blue-100 text-right pb-2">Read more</a>
+                    <a href={props.link} className="px-5 font-bold hover:text-pink-600 text-blue-100 text-right pb-2">Click Here</a>
                     </div>
                     <div className="flex flex-row items-end h-full w-full px-4">
                     <div className="flex border-t border-gray-500 w-full mt-3 pt-2 pb-4">

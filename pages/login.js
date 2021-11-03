@@ -1,6 +1,4 @@
-import Logo from '../public/newLogo.png'
-import Image from 'next/image'
-import {HomeIcon} from '@heroicons/react/outline'
+
 import ClubsHeader from '../components/clubsHeader'
 const login = () => {
     return (

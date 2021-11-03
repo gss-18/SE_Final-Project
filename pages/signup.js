@@ -86,9 +86,7 @@ const signup = () => {
 
             </div>
         
-        
-        </div>
-        <a href="/"><button className="md:ml-auto md:justify-end flex justify-center py-2 px-4 border border-blue-300 hover:bg-blue-500 rounded-md shadow-sm text-ml font-medium text-white ">Home</button></a>
+            </div>
         </div>
     )
 }

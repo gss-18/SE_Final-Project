@@ -7,7 +7,7 @@ const landingPage = () => {
         <div className="">
             <Header />
             <main className="flex flex-col-reverse md:flex-row   ">
-            <div className="md:w-2/3 ">
+            <div className="md:w-2/3 p-4">
                     <Carousel showThumbs={true} > 
                     
                     <div>

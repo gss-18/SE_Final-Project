@@ -16,7 +16,7 @@ const Header = () => {
                        
                         <div className="pl-6 flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-black ">
                              <UserIcon className=" h-10 mb-1  text-blue-600" />
-                           <a href="/userProfile" ><p className="  tracking-wide font-semibold  ">Profile</p></a>   
+                           <a href="/userProfile" ><p className="  tracking-wide font-bold  ">Profile</p></a>   
                         </div>
                      </div>
 

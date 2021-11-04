@@ -26,7 +26,7 @@ const userProfile = () => {
                           <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
                             Name
                           </label>
-                          <input type="text" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
+                          <p  className="border-0 p-5 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
                         </div>
                       </div>
                       <div className="w-full lg:w-6/12 px-4">
@@ -34,7 +34,7 @@ const userProfile = () => {
                           <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
                             Email address
                           </label>
-                          <input type="email" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
+                          <p  className="border-0 p-5 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
                         </div>
                       </div>
                       <div className="w-full lg:w-6/12 px-4">
@@ -42,7 +42,7 @@ const userProfile = () => {
                           <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
                             Semester
                           </label>
-                          <input type="text" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
+                          <p  className="border-0 p-5 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
                         </div>
                       </div>
                       <div className="w-full lg:w-6/12 px-4">
@@ -50,7 +50,7 @@ const userProfile = () => {
                           <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
                             Course
                           </label>
-                          <input type="text" className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
+                          <p  className="border-0 p-5 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
                         </div>
                       </div>
                     </div>
@@ -59,14 +59,9 @@ const userProfile = () => {
                           <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" >
                             Gender
                           </label>
-                          <input type="text" className="disable border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
+                          <p  className="border-0 p-5 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"  />
                         </div>
                       </div>
-                    
-                    
-                   
-                   
-                    
                   </form>
                 </div>
               </div>

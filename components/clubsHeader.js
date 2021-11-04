@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Logo from '../public/newLogo.png'
-import {FolderIcon} from '@heroicons/react/outline'
+import {ArrowRightIcon} from '@heroicons/react/outline'
 
 const clubsHeader = ({text,link}) => {
     return (
@@ -15,7 +15,7 @@ const clubsHeader = ({text,link}) => {
                     <div className="flex mx-12 max-w-2xl">
                        
                         <div className="pl-6 flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-black ">
-                             <FolderIcon className=" h-10 mb-1 group-hover:animate-bounce text-red-500" />
+                             <ArrowRightIcon className=" h-10 mb-1 group-hover:animate-bounce text-red-500" />
                            <a href={link} ><p className=" opacity-0 group-hover:opacity-100 tracking-wide font-semibold ">{text}</p></a>
                         </div>
                      </div>

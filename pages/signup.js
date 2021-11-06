@@ -1,6 +1,37 @@
 
 import ClubsHeader from '../components/clubsHeader'
+import {useState,useEffect} from 'react'
+import axios from 'axios'
+
 const signup = () => {
+    const [email,setEmail] = useState('')
+    const [password,setPassword] = useState('')
+    const [name,setName] = useState('')
+    const [semester,setSemester] = useState('Sem 1')
+    const [course,setCourse] = useState('Computer Science')
+    const [gender,setGender] = useState('Male')
+
+    function handleSubmit(event){
+        // Create a function to send data to API
+        event.preventDefault();
+        const data = {
+            email: email,
+            password: password,
+            name: name,
+            semester: semester,
+            course: course,
+            gender: gender
+        }
+        axios.post('/api/register',data).then((response) => {
+            console.log(response)
+            if(response.status==200){
+                localStorage.setItem('token', response.data.id)
+                window.location.href = '/landingPage'
+            }
+        })
+    }
+
+
     return ( 
         <div className="flex flex-col justify-center ">
         <ClubsHeader text="Home" link="/"/>
@@ -16,29 +47,29 @@ const signup = () => {
          </div>
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-            <form className="mb-0 space-y-6" action="#" method="post">
+            <form className="mb-0 space-y-6" action="#" method="post" onSubmit={handleSubmit}>
                 <div>
                      <label for="name" className="block text-sm font-medium text-gray-700">Name</label>
                      <div className="mt-1 ">
-                         <input className="border-2 rounded-lg border-red-300 flex w-full" id="name" name="name" type="text" autocomplete="email"/>
+                         <input className="border-2 rounded-lg border-red-300 flex w-full" id="name" name="name" type="text" value={name} onChange={(e)=>{setName(e.target.value)}} />
                      </div>
                  </div>
                 <div>
                     <label for="email" className="block text-sm font-medium text-gray-700">Email address</label>
                     <div className="mt-1 ">
-                        <input className="border-2 rounded-lg border-red-300 flex w-full" id="email" name="email" type="email" autocomplete="email"  />
+                        <input className="border-2 rounded-lg border-red-300 flex w-full" id="email" name="email" type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
                      </div>
                 </div>
                 <div>
                      <label for="password" className="block text-sm font-medium text-gray-700">Password</label>
                      <div className="mt-1">
-                         <input className="border-2 rounded-lg border-red-300 flex w-full" id="password" name="password" type="password" autocomplete="current-password"  />
+                         <input className="border-2 rounded-lg border-red-300 flex w-full" id="password" name="password" type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}}   />
                      </div>
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700" for="semester">Semester</label>
                     <div className="mt-1 ">
-                        <select name="semester" id="semester" className="border-2 rounded-lg border-red-300 flex w-full">
+                        <select name="semester" id="semester" className="border-2 rounded-lg border-red-300 flex w-full" value={semester} onChange={(e)=>{setSemester(e.target.value)}}>
                             
                             <option>Sem 1</option>
                             <option>Sem 2</option>
@@ -55,7 +86,7 @@ const signup = () => {
                 <div>
                     <label className="block text-sm font-medium text-gray-700" for="semester">Course</label>
                     <div className="mt-1 ">
-                    <select name="course" id="course" className="border-2 rounded-lg border-red-300 flex w-full">
+                    <select name="course" id="course" className="border-2 rounded-lg border-red-300 flex w-full" value={course} onChange={(e)=>{setCourse(e.target.value)}}>
                         
                         <option>Computer Science</option>
                         <option>Electronics and Communication</option>
@@ -67,7 +98,7 @@ const signup = () => {
                 <div>
                     <label className="block text-sm font-medium text-gray-700" for="semester">Gender</label>
                     <div className="mt-1 ">
-                    <select name="course" id="course" className="border-2 rounded-lg border-red-300 flex w-full">
+                    <select name="course" id="course" className="border-2 rounded-lg border-red-300 flex w-full" value={gender} onChange={(e)=>{setGender(e.target.value)}}>
                         
                         <option>Male</option>
                         <option>Female</option>

@@ -1,8 +1,11 @@
 import Header from '../components/Header'
 import SideNav from '../components/SideNav'
 import { Carousel } from 'react-responsive-carousel';
+import {useState,useEffect} from 'react'
+
 
 const landingPage = () => {
+
     return (
         <div className="">
             <Header />

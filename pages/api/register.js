@@ -5,11 +5,27 @@ import axios from 'axios'
 export default  async (req, res) => {
 
 
+    function generateMarks(email,semester){
+        //Generate random semester scores and return JSON object
+        let marks = []
+        for(let i=1;i<Number(semester);i++){
+            var sem_marks = {}
+            let random = Math.floor(Math.random() * (3))+5  + 0.1*Math.floor(Math.random() * (9))+1
+            sem_marks[i] = random
+            marks.push(sem_marks)
+        }
+        return {
+            email: email,
+            semester: marks
+        }
+    }
+
+
     if(req.method === 'POST'){
         var token = ''
         try{
             console.log("Got request for ",req.body)
-            const {email, password, name} = req.body
+            const {email, password, name, semester} = req.body
             console.log(email, password, name)
             await axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDF2c-J_X4jB-5fXVCFmt10sAXeRYzYtEA', {
                 email: email,
@@ -18,8 +34,8 @@ export default  async (req, res) => {
             })
             .catch(err => {
                 console.log(err)
-                res.status(500).json({
-                    message: err.message
+                res.status(200).json({
+                    auth:false,error:"Username already exists"
                 })
             })
             .then((axios_res) => {
@@ -38,12 +54,14 @@ export default  async (req, res) => {
               course:req.body.course,
               semester:req.body.semester,
             })
+            await db.collection('marks').doc(req.body.email).set(generateMarks(email,semester))
+            
 
             .catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 console.log(error)
-                res.status(200).json(error);
+                res.status(200).json({auth:false,error:"Database Error, Please try again"});
             });
             
             res.status(200).json({auth:true,id:token});
@@ -51,7 +69,7 @@ export default  async (req, res) => {
         }
         catch(err){
             console.log("Error is"+err)
-            res.status(400).json("User already exists");
+            res.status(200).json({auth:false,error:"User already exists"});
         }
     }
 }

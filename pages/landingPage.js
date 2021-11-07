@@ -2,11 +2,13 @@ import Header from '../components/Header'
 import SideNav from '../components/SideNav'
 import { Carousel } from 'react-responsive-carousel';
 import {useState,useEffect} from 'react'
+import AuthRequired from '../components/AuthRequired';
 
 
 const landingPage = () => {
 
     return (
+        <AuthRequired>
         <div className="">
             <Header />
             <main className="flex flex-col-reverse md:flex-row   ">
@@ -35,6 +37,7 @@ const landingPage = () => {
             <SideNav className="flex"/>
             </main>
         </div>
+        </AuthRequired>
     )
 }
 

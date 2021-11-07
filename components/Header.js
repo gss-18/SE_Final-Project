@@ -15,8 +15,9 @@ const Header = () => {
                     <div className="flex mx-12 max-w-2xl">
                        
                         <div className="pl-6 flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-black ">
-                             <UserIcon className=" h-10 mb-1  text-red-600" />
-                           <a href="/userProfile" ><p className="  tracking-wide font-bold  ">Profile</p></a>   
+                       
+                             <UserIcon className=" space-x-10 h-10 mb-1  text-red-600" />
+                             <a href="/userProfile" ><p className="  tracking-wide font-bold  ">Profile</p></a>   
                         </div>
                      </div>
 

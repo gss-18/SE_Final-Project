@@ -1,11 +1,8 @@
-import Header from '../components/Header'
-import SideNav from '../components/SideNav'
-import { Carousel } from 'react-responsive-carousel';
-import {useState,useEffect} from 'react'
 import AuthRequired from '../components/AuthRequired';
+import ClubsHeader from '../components/clubsHeader'
+import { Carousel } from 'react-responsive-carousel';
 
-
-const landingPage = () => {
+const tpo = () => {
     const renderCustomThumbs = () => {
         return [
             <picture>
@@ -46,11 +43,12 @@ const landingPage = () => {
       </picture>,
           ]
     }
-
     return (
         <AuthRequired>
-        <div className="">
-            <Header />
+        <div>
+            <ClubsHeader className="" text="DashBoard" link="/landingPage" />
+            <p className="md:text-4xl text-xl font-bold md:pb-5 text-center   text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-900">Training and Placement</p>
+
             <main className="flex flex-col-reverse md:flex-row   ">
             <div className="md:w-2/3 p-4">
                     <Carousel showThumbs={true} showArrows={true} renderThumbs={renderCustomThumbs} infiniteLoop={true} > 
@@ -74,11 +72,14 @@ const landingPage = () => {
             
                 </Carousel>
             </div>
-            <SideNav className="flex"/>
+            <p className="p-2 text-xl mt-2 font-thin ">The BIT Mesra Deoghar Campus has its own T&P Cell that works independently plus in parallel with its main campus BIT Mesra Placement Cell for ensuring successful career pathways of its full bright and diligent pool of students.
+            The recruitment team that comes to our BIT Mesra Deoghar campus have the privilege to visit nearly located Holy place of Baba Baidyanathdham (one of the Jyotirlinga among the 12 Jyotirlingas which is also a Sparsh Jyotirlinga).
+            The students of BIT Mesra Deoghar campus have the opportunity to participate in recruitment drive of its own campus as well as main & other campuses. These multiple job securing opportunities for our BIT Mesra Deoghar students in turn increases their job earning probability in early part of the placement session.
+            </p>
             </main>
         </div>
         </AuthRequired>
     )
 }
 
-export default landingPage
+export default tpo

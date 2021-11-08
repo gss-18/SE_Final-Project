@@ -49,7 +49,7 @@ const signup = () => {
         
          <div className="sm:mx-auto sm:w-full sm:max-w-md ">
            
-            <span className="mt-10 md:mx-16 mx-2 text-3xl font-extrabold text-gray-900 text-center px-4 md:px-2">Create your account </span>
+            <span className="mt-10 md:mx-16 mx-10  text-3xl font-extrabold text-gray-900 text-center px-4 md:px-2">Create your account </span>
             <p className="text-center mt-2 text-sm text-gray-700 max-w">
             Already Registered?
             <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 mx-1">Sign In</a>

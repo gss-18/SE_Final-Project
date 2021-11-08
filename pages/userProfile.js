@@ -2,7 +2,7 @@ import ClubsHeader from '../components/clubsHeader'
 import {useState,useEffect} from 'react'
 import axios from 'axios'
 var jwt = require('jsonwebtoken');
-
+import AuthRequired from '../components/AuthRequired';
 
 const userProfile = () => {
   const [email,setEmail] = useState('')
@@ -30,6 +30,7 @@ const userProfile = () => {
 
 
     return (
+      <AuthRequired>
         <div>
             <ClubsHeader className="" text="DashBoard" link="/landingPage" />
             <section className=" py-1 bg-blueGray-50">
@@ -117,6 +118,7 @@ const userProfile = () => {
             </div>
           </section>
         </div>
+        </AuthRequired>
     )
 }
 

@@ -3,11 +3,12 @@ import React from 'react'
 import ClubC from '../components/clubCard'
 
 import ClubsHeader from '../components/clubsHeader'
-
+import AuthRequired from '../components/AuthRequired';
 
 
 const clubs = () => {
     return (
+        <AuthRequired>
         <div className="">
             <ClubsHeader className="" text="DashBoard" link="/landingPage" />
                 <div className=" max-h-full items-center text-center mt-5 min-h-screen">
@@ -27,7 +28,7 @@ const clubs = () => {
                 </div>
                 
           </div>
-               
+        </AuthRequired>
                 
 
         

@@ -1,21 +1,59 @@
-import Head from 'next/head'
-
 import { Carousel } from 'react-responsive-carousel';
 
 export default function Home() {
+   const renderCustomThumbs = () => {
+      return [
+          <picture>
+            <source data-srcSet="/bitd.jpg" type="image/jpg" />
+            <img
+              key="01"
+              src="bitd.jpg"
+              alt="First Thumbnail"
+              height="70"
+            />
+          </picture>,
+          <picture>
+          <source data-srcSet="/boysh.jpg" type="image/jpg" />
+          <img
+            key="02"
+            src="boysh.jpg"
+            alt="Second Thumbnail"
+            height="70"
+          />
+        </picture>,
+        <picture>
+        <source data-srcSet="/girlsh.jpeg" type="image/jpeg" />
+        <img
+          key="03"
+          src="girlsh.jpeg"
+          alt="Third Thumbnail"
+          height="70"
+        />
+      </picture>,
+      <picture>
+      <source data-srcSet="/cs.jfif" type="image/jfif" />
+      <img
+        key="04"
+        src="cs.jfif"
+        alt="Fourth Thumbnail"
+        height="70"
+      />
+    </picture>,
+        ]
+    }
+
+
+
   return (
     
     <div className="">
-        <Head>
-           <title>BIT-D</title>  
-        <link rel="icon" href="/Logo.png" />
-      </Head>
+       
            <div className="container mx-auto flex p-5 flex-col md:flex-row items-center md:space-x-xl ">
               <img className="md:h-22 md:w-auto md:px-24 " src="https://erp.bitmesra.ac.in/imgnew1/BITMesradefault-new.png" alt="Smile :)"></img>
               <a href="/login"><button className="md:ml-auto transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110   w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-ml font-medium text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-800 ">Login</button></a>
            </div>
            <p className=" p-10 text-center text-6xl  font-bold "> Welcome to <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-800">BIT-D</span></p> 
-        <Carousel className="mt-2 "> 
+        <Carousel  className="mt-2 " showArrows={true}  showThumbs={true} renderThumbs={renderCustomThumbs} infiniteLoop={true}> 
             
               <div>
                 <img className="md:h-22 md:w-auto md:px-24 h-auto w-auto " src="bitd.jpg" alt="Smile :)"></img>

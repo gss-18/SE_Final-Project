@@ -1,7 +1,9 @@
 import ClubsHeader from '../components/clubsHeader'
 import ClubC from '../components/clubCard'
+import AuthRequired from '../components/AuthRequired';
 const GfgCard = () => {
     return (
+        <AuthRequired>
         <div>
             <ClubsHeader text="Clubs" link="/clubs"/>
                 <div className=" max-h-full items-center  mt-5 min-h-screen">
@@ -24,6 +26,7 @@ const GfgCard = () => {
                     </div>
                     </div>
                 </div>
+             </AuthRequired>
         
     )
 }

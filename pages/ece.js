@@ -49,7 +49,7 @@ const ece = () => {
         <div>
             <ClubsHeader className="" text="DashBoard" link="/landingPage" />
             <p className="md:text-4xl text-xl font-bold md:pb-5 text-center   text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-900">ECE Department of BIT Deoghar</p>
-            <main className="flex flex-col-reverse md:flex-row   ">
+            <main className="flex flex-col md:flex-row   ">
             <div className="md:w-2/3 p-4">
                     <Carousel showThumbs={true} showArrows={true} renderThumbs={renderCustomThumbs} infiniteLoop={true} > 
                     

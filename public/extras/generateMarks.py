@@ -7,4 +7,4 @@ def generate(email,sem):
         marks.append({i:cpga})
     dic = {"email":email,"semester":marks}
     return dic
-print(generate('vihardevalla@gmail.com',5))
+print(generate('gsstrivikram18@gmail.com',5))

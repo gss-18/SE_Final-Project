@@ -13,4 +13,4 @@ function generateMarks(email,semester){
     }
 }
 
-console.log(generateMarks('vihardevalla@gmail.com',8))
+console.log(generateMarks('gsstrivikram18@gmail.com',8))
